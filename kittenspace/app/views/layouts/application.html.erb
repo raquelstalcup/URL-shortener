@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kittenspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <%= csrf_meta_tags %>
+
+<!-- This is where I start my page styling -->
+  <style>
+    body {background-color: #E8E8E8;
+      text-align: center;
+      color: purple;
+      font-family: Georgia;
+      margin: 0;
+      padding: 0;
+      }
+    .images { width:250px; 
+      height:200px;
+      border: solid 2px #787878;
+      border-radius: 25px;
+      }
+</style>
+
+</head>
+<body>
+
+<!-- This is my bootstrap nav bar -->
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"></li>
+        <li><a href="/">Login</a></li>
+        <li><a href="/welcome/kittens">Kittens</a></li>
+        <li><a href="/welcome/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>

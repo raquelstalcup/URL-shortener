@@ -1,0 +1,12 @@
+<% @locations = ["New York, NY", "Miami, FL", "Denver, CO", "Dallas, TX", "San Francisco, CA"] %>
+
+<h1> Where would you like to work? </h1>
+
+<ul>
+	<% @locations.each do |id| %>
+	<a href="<%= results_path(params.merge(location: id).except(:action, :controller))%>">
+			<% image_id = id +".JPG" %>
+			<%= image_tag image_id, class: "image" %> 
+			<h2><%= id %></h2> </a>
+	<% end %>
+</ul>

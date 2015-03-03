@@ -1,0 +1,14 @@
+<% @jobs = ["chef", "doctor", "teacher"] %>
+
+
+<h1> What job would you like to be when you grow up? </h1>
+
+<ul>
+	<% @jobs.each do |id| %>
+	<a href="<%= locations_path(params.merge(job: id).except(:action, :controller))%>">
+			<% image_id = id +".JPG" %>
+			<%= image_tag image_id, class: "image" %>
+			<h2><%= id %></h2> </a>
+	<% end %>
+</ul>
+

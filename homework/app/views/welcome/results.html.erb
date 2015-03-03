@@ -1,0 +1,15 @@
+<h3>So you want to be a</h3><br><br><br>
+		<% image_id = params[:job] +".JPG" %>
+		<% image_id_2 = params[:location] +".JPG" %>
+		<%= image_tag image_id, class: "image" %>
+		<%= image_tag image_id_2, class: "image" %>	
+		<br><br><br>
+	<h3><%= params[:job].capitalize %> in <%= params[:location] %></h3>
+	<br><br><br>
+
+	<h3>Here is a list of current available positions</h3>
+	<br><br><br>
+
+	<% @results.model.jobs.each do |job| %>
+	<h4><%= job.company_name %> in <%= job.location %></h4>
+	<% end %>
